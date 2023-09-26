@@ -8,9 +8,13 @@ void ListInit(List *plist) {
 }
 void LInsert(List *plist, LData data) {
     if (plist->numOfData < LIST_LEN) {
+        /* 내가 처음 작성한 코드 -> 중복된 코드 존재
         plist->arr[plist->curPosition + 1] = data;
         (plist->numOfData)++;
         (plist->curPosition)++;
+        */
+        plist->arr[plist->numOfData] = data;
+        (plist->numOfData)++;
     }
 }
 int LFirst(List *plist, LData *pdata) {
